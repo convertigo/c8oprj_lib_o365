@@ -1,0 +1,52 @@
+segment: path-to-apitestpage
+title: Title for APITestpage
+↓Header [ngx.components.UIDynamicElement-1648833663335]: 
+  beanData: '{"ionBean":"Header"}'
+  tagName: ion-header
+  ↓ToolBar [ngx.components.UIDynamicElement-1648833663337]: 
+    beanData: '{"ionBean":"ToolBar"}'
+    tagName: ion-toolbar
+    ↓ButtonSet [ngx.components.UIDynamicElement-1648833663339]: 
+      beanData: '{"ionBean":"ButtonSet","SetPosition":"plain:start"}'
+      tagName: ion-buttons
+      ↓BackButton [ngx.components.UIDynamicElement-1648833663341]: 
+        beanData: '{"ionBean":"BackButton"}'
+        tagName: ion-back-button
+      ↓MenuButton [ngx.components.UIDynamicElement-1648833663343]: 
+        beanData: '{"ionBean":"MenuButton"}'
+        tagName: ion-menu-button
+    ↓ButtonSet1 [ngx.components.UIDynamicElement-1648833663345]: 
+      beanData: '{"ionBean":"ButtonSet","SetPosition":"plain:end"}'
+      tagName: ion-buttons
+      ↓Button [ngx.components.UIDynamicElement-1648833663347]: 
+        beanData: '{"ionBean":"Button"}'
+        tagName: ion-button
+        ↓Icon [ngx.components.UIDynamicElement-1648833663349]: 
+          beanData: '{"ionBean":"Icon","IconName":"plain:ellipsis-vertical"}'
+          tagName: ion-icon
+        ↓Event [ngx.components.UIControlEvent-1648833663351]: 
+    ↓BarTitle [ngx.components.UIDynamicElement-1648833663353]: 
+      beanData: '{"ionBean":"BarTitle"}'
+      tagName: ion-title
+      ↓Text [ngx.components.UIText-1648833663355]: 
+        textValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+            - MobileSmartSourceType: plain:ToolBar title
+↓Content [ngx.components.UIDynamicElement-1648833642634]: 
+  beanData: '{"ionBean":"Content"}'
+  tagName: ion-content
+  ↓Button [ngx.components.UIDynamicElement-1648834392025]: 
+    beanData: '{"ionBean":"Button"}'
+    tagName: ion-button
+    ↓Label [ngx.components.UIDynamicElement-1648834392028]: 
+      beanData: '{"ionBean":"Label"}'
+      tagName: ion-label
+      ↓Text [ngx.components.UIText-1648834392031]: 
+        textValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+            - MobileSmartSourceType: plain:Create Event
+    ↓Event [ngx.components.UIControlEvent-1648834392034]: 
+      ↓CallSequence [ngx.components.UIDynamicAction-1648834414327]: 
+        beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:lib_O365.OutlookCreateEvent"}'

@@ -1,0 +1,24 @@
+baseDir: /v1.0/me/
+https: true
+port: 443
+server: graph.microsoft.com
+↓CreateEvent [transactions.JsonHttpTransaction]: 
+  httpParameters: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: Content-Type
+            - java.lang.String: 
+              - ↑value: application/json
+  httpVerb: POST
+  subDir: events
+  ↓__body [variables.RequestableHttpVariable-1648834029254]: 
+    httpMethod: POST
+  ↓__header_Prefer [variables.RequestableHttpVariable-1648834029256]: 
+    value: outlook.timezone="Central European Time"
+↓Default_transaction [transactions.HttpTransaction]: 
+  ↑default: true

@@ -1,0 +1,61 @@
+authenticatedContextRequired: true
+↓BuildEvent [steps.SimpleStep-1648834112444]: 
+  expression: |
+    'var event = {
+      "subject": "Let''s go for lunch",
+      "body": {
+        "contentType": "HTML",
+        "content": "Does noon work for you?"
+      },
+      "start": {
+          "dateTime": "2017-04-15T12:00:00",
+          "timeZone": "Pacific Standard Time"
+      },
+      "end": {
+          "dateTime": "2017-04-15T14:00:00",
+          "timeZone": "Pacific Standard Time"
+      },
+      "location":{
+          "displayName":"Harry''s Bar"
+      },
+      "attendees": [
+        {
+          "emailAddress": {
+            "address":"samanthab@contoso.onmicrosoft.com",
+            "name": "Samantha Booth"
+          },
+          "type": "required"
+        }
+      ],
+      "allowNewTimeProposals": true,
+      "transactionId":"7E163156-7762-4BEB-A1C6-729EA81755A7"
+    }
+    event = JSON.stringify(event);
+    '
+↓jElement [steps.ElementStep-1648834290353]: 
+  expression: event
+  nodeName: event
+↓GetTokenFromSession [steps.SessionGetStep-1648834577134]: 
+  key: oAuthAccessToken
+↓Call_Transaction [steps.TransactionStep-1648834193043]: 
+  sourceTransaction: lib_O365.O365Calendar.CreateEvent
+  ↓__body [variables.StepVariable-1648834193045]: 
+    sourceDefinition: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - java.lang.String: 
+            - ↑value: 1648834290353
+          - java.lang.String: 
+            - ↑value: ./text()
+  ↓__header_Prefer [variables.StepVariable-1648834193047]: 
+    value: outlook.timezone="Central European Time"
+  ↓__header_Authorization [variables.StepVariable-1648834531789]: 
+    sourceDefinition: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - java.lang.String: 
+            - ↑value: 1648834577134
+          - java.lang.String: 
+            - ↑value: ./expression/text()
