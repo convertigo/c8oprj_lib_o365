@@ -64,3 +64,52 @@ title: Title for APITestpage
     ↓Event [ngx.components.UIControlEvent-1648975229640]: 
       ↓CallSequence [ngx.components.UIDynamicAction-1648975229643]: 
         beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:lib_OAuth.SignOut"}'
+  ↓Button2 [ngx.components.UIDynamicElement-1648982072629]: 
+    beanData: '{"ionBean":"Button"}'
+    tagName: ion-button
+    ↓Label [ngx.components.UIDynamicElement-1648982072632]: 
+      beanData: '{"ionBean":"Label"}'
+      tagName: ion-label
+      ↓Text [ngx.components.UIText-1648982072635]: 
+        textValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+            - MobileSmartSourceType: plain:ListUsers
+    ↓Event [ngx.components.UIControlEvent-1648982072638]: 
+      ↓CallSequence [ngx.components.UIDynamicAction-1648982072641]: 
+        beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:lib_O365.UsersList"}'
+  ↓ListContainer [ngx.components.UIDynamicElement-1648982595730]: 
+    beanData: '{"ionBean":"List"}'
+    tagName: ion-list
+    ↓ListHeader [ngx.components.UIDynamicElement-1648982595733]: 
+      beanData: '{"ionBean":"Listheader"}'
+      tagName: ion-list-header
+      ↓Label [ngx.components.UIDynamicElement-1648982595736]: 
+        beanData: '{"ionBean":"Label"}'
+        tagName: ion-label
+        ↓Heading [ngx.components.UIDynamicTag-1648982595739]: 
+          beanData: '{"ionBean":"Heading"}'
+          tagName: h1
+          ↓Text [ngx.components.UIText-1648982595742]: 
+            textValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                - MobileSmartSourceType: plain:Users List
+    ↓Directive [ngx.components.UIControlDirective-1648982595745]: 
+      directiveIndexName: idx
+      directiveItemName: item
+      directiveSource: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: source:{"filter":"Sequence","project":"lib_O365","input":"","model":{"data":[{"sequence":"lib_O365.UsersList","marker":""}],"path":"?.value","prefix":"","suffix":"","custom":"","useCustom":false}}
+      ↓ListItem [ngx.components.UIDynamicElement-1648982595748]: 
+        beanData: '{"ionBean":"ListItem"}'
+        tagName: ion-item
+        ↓Label [ngx.components.UIDynamicElement-1648982595751]: 
+          beanData: '{"ionBean":"Label"}'
+          tagName: ion-label
+          ↓Text [ngx.components.UIText-1648982595754]: 
+            textValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                - MobileSmartSourceType: source:{"filter":"Iteration","project":"lib_O365","input":"","model":{"data":[{"priority":1648982595745}],"path":"?.displayName","prefix":"","suffix":"","custom":"","useCustom":false}}

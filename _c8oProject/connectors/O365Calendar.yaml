@@ -3,6 +3,7 @@ https: true
 port: 443
 server: graph.microsoft.com
 ↓CreateEvent [transactions.JsonHttpTransaction]: 
+  ↑default: true
   httpParameters: 
     - xmlizable: 
       - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
@@ -20,5 +21,3 @@ server: graph.microsoft.com
     httpMethod: POST
   ↓__header_Prefer [variables.RequestableHttpVariable-1648834029256]: 
     value: outlook.timezone="Central European Time"
-↓Default_transaction [transactions.HttpTransaction]: 
-  ↑default: true

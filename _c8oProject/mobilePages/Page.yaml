@@ -106,7 +106,12 @@ title: First page
       varValue: 
         - xmlizable: 
           - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-          - MobileSmartSourceType: script:'+https://graph.microsoft.com/Calendars.Read+https://graph.microsoft.com/Calendars.ReadWrite'
+          - MobileSmartSourceType: |
+              'script:''+https://graph.microsoft.com/Calendars.Read''+
+              ''+https://graph.microsoft.com/Calendars.ReadWrite''+
+              ''+https://graph.microsoft.com/User.Read.All''
+              
+              '
 ↓Footer [ngx.components.UIDynamicElement-1491634242460]: 
   beanData: '{"ionBean":"Footer"}'
   comment: Page footer

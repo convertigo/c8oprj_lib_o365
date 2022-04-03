@@ -1,0 +1,8 @@
+baseDir: /v1.0/
+https: true
+port: 443
+server: graph.microsoft.com
+trustAllServerCertificates: false
+↓Users [transactions.JsonHttpTransaction]: 
+  ↑default: true
+  subDir: users

@@ -1,0 +1,22 @@
+↓GetTokenFromSession [steps.SessionGetStep-1648981980019]: 
+  key: oAuthAccessToken
+↓Call_Transaction [steps.TransactionStep-1648981986211]: 
+  sourceTransaction: lib_O365.Users.Users
+  ↓__header_Authorization [variables.StepVariable-1648981998469]: 
+    sourceDefinition: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - java.lang.String: 
+            - ↑value: 1648981980019
+          - java.lang.String: 
+            - ↑value: ./expression/text()
+↓Copy [steps.XMLCopyStep-1648982639192]: 
+  sourceDefinition: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - java.lang.String: 
+          - ↑value: 1648981986211
+        - java.lang.String: 
+          - ↑value: ./document/object/value

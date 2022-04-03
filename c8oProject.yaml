@@ -3,8 +3,10 @@
   comment: Convertigo Mobile builder Project
   corsOrigin: =Origin
   ↓O365Calendar [connectors.HttpConnector]: 🗏 connectors/O365Calendar.yaml
+  ↓Users [connectors.HttpConnector]: 🗏 connectors/Users.yaml
   ↓void [connectors.SqlConnector]: 🗏 connectors/void.yaml
   ↓OutlookCreateEvent [sequences.GenericSequence]: 🗏 sequences/OutlookCreateEvent.yaml
+  ↓UsersList [sequences.GenericSequence]: 🗏 sequences/UsersList.yaml
   ↓lib_UserManager_ui_ngx_reference [references.ProjectSchemaReference]: 
     projectName: lib_UserManager_ui_ngx=https://github.com/convertigo/c8oprj-lib-user-manager-ui-ngx.git:branch=8.0.0
   ↓NgxBuilderTemplate [references.ProjectSchemaReference]: 
