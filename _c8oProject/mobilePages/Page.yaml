@@ -71,13 +71,13 @@ title: First page
       varValue: 
         - xmlizable: 
           - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-          - MobileSmartSourceType: script:true
+          - MobileSmartSourceType: script:false
     ↓enableLinkedInLogin [ngx.components.UIUseVariable-1648835284156]: 
       comment: Set to false to disable login with LinkedIn
       varValue: 
         - xmlizable: 
           - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-          - MobileSmartSourceType: script:true
+          - MobileSmartSourceType: script:false
     ↓enableAzureADLogin [ngx.components.UIUseVariable-1648835284158]: 
       comment: Set to false to disable login with AzureAD
       varValue: 
