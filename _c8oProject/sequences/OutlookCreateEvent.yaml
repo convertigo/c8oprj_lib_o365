@@ -2,34 +2,38 @@ authenticatedContextRequired: true
 ↓BuildEvent [steps.SimpleStep-1648834112444]: 
   expression: |
     'var event = {
-      "subject": "Let''s go for lunch",
+      "subject": Subject,
       "body": {
         "contentType": "HTML",
-        "content": "Does noon work for you?"
+        "content": Body
       },
       "start": {
-          "dateTime": "2017-04-15T12:00:00",
-          "timeZone": "Pacific Standard Time"
+          "dateTime": new Date(Start*1).toISOString(),
+          "timeZone": "Greenwich Mean Time"
       },
       "end": {
-          "dateTime": "2017-04-15T14:00:00",
-          "timeZone": "Pacific Standard Time"
+          "dateTime": new Date(End*1).toISOString(),
+          "timeZone": "Greenwich Mean Time"
       },
       "location":{
-          "displayName":"Harry''s Bar"
+          "displayName":Location
       },
+      
       "attendees": [
-        {
-          "emailAddress": {
-            "address":"samanthab@contoso.onmicrosoft.com",
-            "name": "Samantha Booth"
-          },
-          "type": "required"
-        }
       ],
       "allowNewTimeProposals": true,
-      "transactionId":"7E163156-7762-4BEB-A1C6-729EA81755A7"
     }
+    
+    for (i=0; i < AttendeesEmail.length; i++) {
+    	event.attendees.push({
+          "emailAddress": {
+            "address":AttendeesEmail[i],
+            "name": AttendeesName[i]
+          },
+          "type": "required"
+    	})	
+    }
+    
     event = JSON.stringify(event);
     '
 ↓jElement [steps.ElementStep-1648834290353]: 
@@ -60,3 +64,32 @@ authenticatedContextRequired: true
             - ↑value: 1648834577134
           - java.lang.String: 
             - ↑value: ./expression/text()
+↓Copy [steps.XMLCopyStep-1649004270560]: 
+  sourceDefinition: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - java.lang.String: 
+          - ↑value: 1648834193043
+        - java.lang.String: 
+          - ↑value: ./document/object
+↓Subject [variables.RequestableVariable-1649004431640]: 
+  comment: Subject of the meeting (text)
+↓Body [variables.RequestableVariable-1649004442813]: 
+  comment: |
+    Body of the meeting description (HTML)
+    
+↓Start [variables.RequestableVariable-1649004455119]: 
+  comment: |
+    Start hour GMT (timestamp)
+    
+↓End [variables.RequestableVariable-1649004466253]: 
+  comment: End hour GMT (timestamp)
+↓Location [variables.RequestableVariable-1649004476653]: 
+  comment: Where is this meeting taking palce (Text)
+↓AttendeesEmail [variables.RequestableMultiValuedVariable-1649004631029]: 
+  comment: List of Attendees email(text)
+↓AttendeesName [variables.RequestableMultiValuedVariable-1649004663566]: 
+  comment: List of Attendees Names (text)
+↓AllowTimeProposals [variables.RequestableVariable-1649004504781]: 
+  comment: Allow or not (true/false)

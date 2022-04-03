@@ -112,6 +112,14 @@ title: First page
               ''+https://graph.microsoft.com/User.Read.All''
               
               '
+    ↓tenantid [ngx.components.UIUseVariable-1649003733073]: 
+      comment: |
+        Additional Scope to be added to the standard Scope. This will be concatenated to to the scopr string. For Azure AD start with a + sign
+        
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:
 ↓Footer [ngx.components.UIDynamicElement-1491634242460]: 
   beanData: '{"ionBean":"Footer"}'
   comment: Page footer

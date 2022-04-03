@@ -50,6 +50,54 @@ title: Title for APITestpage
     ↓Event [ngx.components.UIControlEvent-1648834392034]: 
       ↓CallSequence [ngx.components.UIDynamicAction-1648834414327]: 
         beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:lib_O365.OutlookCreateEvent"}'
+        ↓Subject [ngx.components.UIControlVariable-1649006297751]: 
+          comment: new variable
+          varValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:TEST
+        ↓Body [ngx.components.UIControlVariable-1649006297753]: 
+          comment: new variable
+          varValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:<b>TEST</b><H1>Big TEST</H1>
+        ↓Start [ngx.components.UIControlVariable-1649006297755]: 
+          comment: new variable
+          varValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:1649005475564
+        ↓End [ngx.components.UIControlVariable-1649006297757]: 
+          comment: new variable
+          varValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:1649005476564
+        ↓Location [ngx.components.UIControlVariable-1649006297759]: 
+          comment: new variable
+          varValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:Multiburo
+        ↓AttendeesEmail [ngx.components.UIControlVariable-1649006297761]: 
+          comment: new variable
+          varValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:['test@convertigo.com]
+        ↓AttendeesName [ngx.components.UIControlVariable-1649006297763]: 
+          comment: new variable
+          varValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:[Olivier TEST]
+        ↓AllowTimeProposals [ngx.components.UIControlVariable-1649006297765]: 
+          comment: new variable
+          varValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:false
   ↓Button1 [ngx.components.UIDynamicElement-1648975229631]: 
     beanData: '{"ionBean":"Button"}'
     tagName: ion-button
