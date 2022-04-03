@@ -108,8 +108,83 @@ title: Title for APITestpage
         ↓Label [ngx.components.UIDynamicElement-1648982595751]: 
           beanData: '{"ionBean":"Label"}'
           tagName: ion-label
-          ↓Text [ngx.components.UIText-1648982595754]: 
-            textValue: 
-              - xmlizable: 
-                - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-                - MobileSmartSourceType: source:{"filter":"Iteration","project":"lib_O365","input":"","model":{"data":[{"priority":1648982595745}],"path":"?.displayName","prefix":"","suffix":"","custom":"","useCustom":false}}
+          ↓Heading [ngx.components.UIDynamicTag-1648982847969]: 
+            beanData: '{"ionBean":"Heading"}'
+            tagName: h1
+            ↓Text1 [ngx.components.UIText-1648982595754]: 
+              textValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                  - MobileSmartSourceType: source:{"filter":"Iteration","project":"lib_O365","input":"","model":{"data":[{"priority":1648982595745}],"path":"?.displayName","prefix":"","suffix":"","custom":"","useCustom":false}}
+          ↓Paragraph [ngx.components.UIDynamicElement-1648982904671]: 
+            beanData: '{"ionBean":"Paragraph"}'
+            tagName: p
+            ↓Text [ngx.components.UIText-1648982904673]: 
+              textValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                  - MobileSmartSourceType: source:{"filter":"Iteration","project":"lib_O365","input":"","model":{"data":[{"priority":1648982595745}],"path":"?.givenName","prefix":"","suffix":"","custom":"","useCustom":false}}
+          ↓Paragraph1 [ngx.components.UIDynamicElement-1648982907623]: 
+            beanData: '{"ionBean":"Paragraph"}'
+            tagName: p
+            ↓Text [ngx.components.UIText-1648982907625]: 
+              textValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                  - MobileSmartSourceType: source:{"filter":"Iteration","project":"lib_O365","input":"","model":{"data":[{"priority":1648982595745}],"path":"?.id","prefix":"","suffix":"","custom":"","useCustom":false}}
+          ↓Paragraph2 [ngx.components.UIDynamicElement-1648982912849]: 
+            beanData: '{"ionBean":"Paragraph"}'
+            tagName: p
+            ↓Text [ngx.components.UIText-1648982912852]: 
+              textValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                  - MobileSmartSourceType: source:{"filter":"Iteration","project":"lib_O365","input":"","model":{"data":[{"priority":1648982595745}],"path":"?.jobTitle","prefix":"","suffix":"","custom":"","useCustom":false}}
+          ↓Paragraph3 [ngx.components.UIDynamicElement-1648982915023]: 
+            beanData: '{"ionBean":"Paragraph"}'
+            tagName: p
+            ↓Text [ngx.components.UIText-1648982915026]: 
+              textValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                  - MobileSmartSourceType: source:{"filter":"Iteration","project":"lib_O365","input":"","model":{"data":[{"priority":1648982595745}],"path":"?.mail","prefix":"","suffix":"","custom":"","useCustom":false}}
+          ↓Paragraph4 [ngx.components.UIDynamicElement-1648982916338]: 
+            beanData: '{"ionBean":"Paragraph"}'
+            tagName: p
+            ↓Text [ngx.components.UIText-1648982916341]: 
+              textValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                  - MobileSmartSourceType: source:{"filter":"Iteration","project":"lib_O365","input":"","model":{"data":[{"priority":1648982595745}],"path":"?.mobilePhone","prefix":"","suffix":"","custom":"","useCustom":false}}
+          ↓Paragraph5 [ngx.components.UIDynamicElement-1648982917556]: 
+            beanData: '{"ionBean":"Paragraph"}'
+            tagName: p
+            ↓Text [ngx.components.UIText-1648982917559]: 
+              textValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                  - MobileSmartSourceType: source:{"filter":"Iteration","project":"lib_O365","input":"","model":{"data":[{"priority":1648982595745}],"path":"?.officeLocation","prefix":"","suffix":"","custom":"","useCustom":false}}
+          ↓Paragraph6 [ngx.components.UIDynamicElement-1648982918825]: 
+            beanData: '{"ionBean":"Paragraph"}'
+            tagName: p
+            ↓Text [ngx.components.UIText-1648982918828]: 
+              textValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                  - MobileSmartSourceType: source:{"filter":"Iteration","project":"lib_O365","input":"","model":{"data":[{"priority":1648982595745}],"path":"?.preferredLanguage","prefix":"","suffix":"","custom":"","useCustom":false}}
+          ↓Paragraph7 [ngx.components.UIDynamicElement-1648982970830]: 
+            beanData: '{"ionBean":"Paragraph"}'
+            tagName: p
+            ↓Text [ngx.components.UIText-1648982970833]: 
+              textValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                  - MobileSmartSourceType: source:{"filter":"Iteration","project":"lib_O365","input":"","model":{"data":[{"priority":1648982595745}],"path":"?.surname","prefix":"","suffix":"","custom":"","useCustom":false}}
+          ↓Paragraph8 [ngx.components.UIDynamicElement-1648982979630]: 
+            beanData: '{"ionBean":"Paragraph"}'
+            tagName: p
+            ↓Text [ngx.components.UIText-1648982979633]: 
+              textValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                  - MobileSmartSourceType: source:{"filter":"Iteration","project":"lib_O365","input":"","model":{"data":[{"priority":1648982595745}],"path":"?.userPrincipalName","prefix":"","suffix":"","custom":"","useCustom":false}}
