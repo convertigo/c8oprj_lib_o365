@@ -50,3 +50,17 @@ title: Title for APITestpage
     ↓Event [ngx.components.UIControlEvent-1648834392034]: 
       ↓CallSequence [ngx.components.UIDynamicAction-1648834414327]: 
         beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:lib_O365.OutlookCreateEvent"}'
+  ↓Button1 [ngx.components.UIDynamicElement-1648975229631]: 
+    beanData: '{"ionBean":"Button"}'
+    tagName: ion-button
+    ↓Label [ngx.components.UIDynamicElement-1648975229634]: 
+      beanData: '{"ionBean":"Label"}'
+      tagName: ion-label
+      ↓Text [ngx.components.UIText-1648975229637]: 
+        textValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+            - MobileSmartSourceType: plain:Logout
+    ↓Event [ngx.components.UIControlEvent-1648975229640]: 
+      ↓CallSequence [ngx.components.UIDynamicAction-1648975229643]: 
+        beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:lib_OAuth.SignOut"}'

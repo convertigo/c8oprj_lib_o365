@@ -100,7 +100,13 @@ title: First page
       varValue: 
         - xmlizable: 
           - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-          - MobileSmartSourceType: script:'300'
+          - MobileSmartSourceType: script:'100'
+    ↓scope [ngx.components.UIUseVariable-1648976170422]: 
+      comment: Set to false to disable loggin with google
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:'+https://graph.microsoft.com/Calendars.Read+https://graph.microsoft.com/Calendars.ReadWrite'
 ↓Footer [ngx.components.UIDynamicElement-1491634242460]: 
   beanData: '{"ionBean":"Footer"}'
   comment: Page footer
