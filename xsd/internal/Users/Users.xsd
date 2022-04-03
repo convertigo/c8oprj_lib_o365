@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:lib_O365_ns="http://www.convertigo.com/convertigo/projects/lib_O365" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://www.convertigo.com/convertigo/projects/lib_O365">
+    <xsd:element name="Users__Users" type="lib_O365_ns:Users__UsersRequestData">
+        <xsd:annotation/>
+    </xsd:element>
+    <xsd:element name="Users__UsersResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="response" type="lib_O365_ns:Users__UsersResponseData"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:complexType name="Users__UsersResponseType">
+        <xsd:sequence>
+            <xsd:element name="document" type="lib_O365_ns:Users__UsersResponseData"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="Users__UsersRequestData">
+        <xsd:sequence/>
+    </xsd:complexType>
+    <xsd:complexType name="Users_Users_document_object__odata_contextType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="@odata.context" name="originalKeyName" type="xsd:string"/>
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="Users_Users_document_object_value_object_businessPhones_valueType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="Users_Users_document_object_value_object_businessPhonesType">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="value" type="lib_O365_ns:Users_Users_document_object_value_object_businessPhones_valueType"/>
+        </xsd:sequence>
+        <xsd:attribute name="length" type="xsd:byte"/>
+        <xsd:attribute default="array" name="type" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="Users_Users_document_object_value_object_displayNameType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="Users_Users_document_object_value_object_givenNameType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="Users_Users_document_object_value_object_idType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="Users_Users_document_object_value_object_jobTitleType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="Users_Users_document_object_value_object_mailType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="Users_Users_document_object_value_object_mobilePhoneType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="Users_Users_document_object_value_object_officeLocationType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="Users_Users_document_object_value_object_preferredLanguageType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="Users_Users_document_object_value_object_surnameType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="Users_Users_document_object_value_object_userPrincipalNameType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="Users_Users_document_object_value_objectType">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="businessPhones" type="lib_O365_ns:Users_Users_document_object_value_object_businessPhonesType"/>
+            <xsd:element minOccurs="0" name="displayName" type="lib_O365_ns:Users_Users_document_object_value_object_displayNameType"/>
+            <xsd:element minOccurs="0" name="givenName" type="lib_O365_ns:Users_Users_document_object_value_object_givenNameType"/>
+            <xsd:element minOccurs="0" name="id" type="lib_O365_ns:Users_Users_document_object_value_object_idType"/>
+            <xsd:element minOccurs="0" name="jobTitle" type="lib_O365_ns:Users_Users_document_object_value_object_jobTitleType"/>
+            <xsd:element minOccurs="0" name="mail" type="lib_O365_ns:Users_Users_document_object_value_object_mailType"/>
+            <xsd:element minOccurs="0" name="mobilePhone" type="lib_O365_ns:Users_Users_document_object_value_object_mobilePhoneType"/>
+            <xsd:element minOccurs="0" name="officeLocation" type="lib_O365_ns:Users_Users_document_object_value_object_officeLocationType"/>
+            <xsd:element minOccurs="0" name="preferredLanguage" type="lib_O365_ns:Users_Users_document_object_value_object_preferredLanguageType"/>
+            <xsd:element minOccurs="0" name="surname" type="lib_O365_ns:Users_Users_document_object_value_object_surnameType"/>
+            <xsd:element minOccurs="0" name="userPrincipalName" type="lib_O365_ns:Users_Users_document_object_value_object_userPrincipalNameType"/>
+        </xsd:sequence>
+        <xsd:attribute default="object" name="type" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="Users_Users_document_object_valueType">
+        <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="object" type="lib_O365_ns:Users_Users_document_object_value_objectType"/>
+        </xsd:sequence>
+        <xsd:attribute name="length" type="xsd:byte"/>
+        <xsd:attribute default="array" name="type" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="Users_Users_document_objectType">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="_odata_context" type="lib_O365_ns:Users_Users_document_object__odata_contextType"/>
+            <xsd:element minOccurs="0" name="value" type="lib_O365_ns:Users_Users_document_object_valueType"/>
+        </xsd:sequence>
+        <xsd:attribute default="object" name="type" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="Users__UsersResponseData">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="object" type="lib_O365_ns:Users_Users_document_objectType"/>
+            <xsd:element minOccurs="0" name="error" type="lib_O365_ns:ConvertigoError"/>
+        </xsd:sequence>
+        <xsd:attribute name="connector" type="xsd:string"/>
+        <xsd:attribute name="context" type="xsd:string"/>
+        <xsd:attribute name="contextId" type="xsd:string"/>
+        <xsd:attribute name="fromStub" type="xsd:boolean"/>
+        <xsd:attribute name="fromcache" type="xsd:boolean"/>
+        <xsd:attribute name="generated" type="xsd:string"/>
+        <xsd:attribute name="project" type="xsd:string"/>
+        <xsd:attribute name="sequence" type="xsd:string"/>
+        <xsd:attribute name="signature" type="xsd:long"/>
+        <xsd:attribute name="transaction" type="xsd:string"/>
+        <xsd:attribute name="version" type="xsd:string"/>
+        <xsd:attribute name="screenclass" type="xsd:string"/>
+        <xsd:attribute name="userReference" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="ConvertigoErrorContextVariable">
+        <xsd:attribute name="name" type="xsd:string"/>
+        <xsd:attribute name="value" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="ConvertigoErrorContext">
+        <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="variable" type="lib_O365_ns:ConvertigoErrorContextVariable"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="ConvertigoError">
+        <xsd:sequence minOccurs="0">
+            <xsd:element name="code" type="xsd:integer"/>
+            <xsd:element name="message" type="xsd:string"/>
+            <xsd:element name="details" type="xsd:string"/>
+            <xsd:element name="context" type="lib_O365_ns:ConvertigoErrorContext"/>
+            <xsd:element name="exception" type="xsd:string"/>
+            <xsd:element name="stacktrace" type="xsd:string"/>
+        </xsd:sequence>
+        <xsd:attribute name="project" type="xsd:string"/>
+        <xsd:attribute name="connector" type="xsd:string"/>
+        <xsd:attribute name="transaction" type="xsd:string"/>
+        <xsd:attribute name="sequence" type="xsd:string"/>
+        <xsd:attribute name="type">
+            <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                    <xsd:enumeration value="c8o"/>
+                    <xsd:enumeration value="project"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+        </xsd:attribute>
+    </xsd:complexType>
+</xsd:schema>
