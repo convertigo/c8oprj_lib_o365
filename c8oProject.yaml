@@ -2,6 +2,7 @@
 ↓lib_O365 [core.Project]: 
   comment: Convertigo Mobile builder Project
   corsOrigin: =Origin
+  version: 1.0
   ↓O365Calendar [connectors.HttpConnector]: 🗏 connectors/O365Calendar.yaml
   ↓Users [connectors.HttpConnector]: 🗏 connectors/Users.yaml
   ↓void [connectors.SqlConnector]: 🗏 connectors/void.yaml

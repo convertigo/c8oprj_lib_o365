@@ -3,6 +3,7 @@ comment: |
   
 ↓GetTokenFromSession [steps.SessionGetStep-1648981980019]: 
   key: oAuthAccessToken
+  output: false
 ↓Call_Transaction [steps.TransactionStep-1648981986211]: 
   sourceTransaction: lib_O365.Users.Users
   ↓__header_Authorization [variables.StepVariable-1648981998469]: 

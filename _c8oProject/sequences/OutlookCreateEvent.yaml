@@ -37,6 +37,7 @@ authenticatedContextRequired: true
   nodeName: event
 ↓GetTokenFromSession [steps.SessionGetStep-1648834577134]: 
   key: oAuthAccessToken
+  output: false
 ↓Call_Transaction [steps.TransactionStep-1648834193043]: 
   sourceTransaction: lib_O365.O365Calendar.CreateEvent
   ↓__body [variables.StepVariable-1648834193045]: 
