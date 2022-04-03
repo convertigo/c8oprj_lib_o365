@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:lib_O365_ns="http://www.convertigo.com/convertigo/projects/lib_O365" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://www.convertigo.com/convertigo/projects/lib_O365">
+    <xsd:element name="O365Calendar__CreateEvent" type="lib_O365_ns:O365Calendar__CreateEventRequestData">
+        <xsd:annotation/>
+    </xsd:element>
+    <xsd:element name="O365Calendar__CreateEventResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="response" type="lib_O365_ns:O365Calendar__CreateEventResponseData"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:complexType name="O365Calendar__CreateEventResponseType">
+        <xsd:sequence>
+            <xsd:element name="document" type="lib_O365_ns:O365Calendar__CreateEventResponseData"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar__CreateEventRequestData">
+        <xsd:sequence>
+            <xsd:element name="__body" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:appinfo>new variable</xsd:appinfo>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="__header_Prefer" type="xsd:string">
+                <xsd:annotation>
+                    <xsd:appinfo>new variable</xsd:appinfo>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object__odata_contextType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="@odata.context" name="originalKeyName" type="xsd:string"/>
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object__odata_etagType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="@odata.etag" name="originalKeyName" type="xsd:string"/>
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_allowNewTimeProposalsType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_attendees_object_emailAddress_addressType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_attendees_object_emailAddress_nameType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_attendees_object_emailAddressType">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="address" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_attendees_object_emailAddress_addressType"/>
+            <xsd:element minOccurs="0" name="name" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_attendees_object_emailAddress_nameType"/>
+        </xsd:sequence>
+        <xsd:attribute default="object" name="type" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_attendees_object_status_responseType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_attendees_object_status_timeType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_attendees_object_statusType">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="response" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_attendees_object_status_responseType"/>
+            <xsd:element minOccurs="0" name="time" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_attendees_object_status_timeType"/>
+        </xsd:sequence>
+        <xsd:attribute default="object" name="type" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_attendees_object_typeType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_attendees_objectType">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="emailAddress" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_attendees_object_emailAddressType"/>
+            <xsd:element minOccurs="0" name="status" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_attendees_object_statusType"/>
+            <xsd:element minOccurs="0" name="type" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_attendees_object_typeType"/>
+        </xsd:sequence>
+        <xsd:attribute default="object" name="type" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_attendeesType">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="object" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_attendees_objectType"/>
+        </xsd:sequence>
+        <xsd:attribute name="length" type="xsd:byte"/>
+        <xsd:attribute default="array" name="type" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_body_contentType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_body_contentTypeType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_bodyType">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="content" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_body_contentType"/>
+            <xsd:element minOccurs="0" name="contentType" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_body_contentTypeType"/>
+        </xsd:sequence>
+        <xsd:attribute default="object" name="type" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_bodyPreviewType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_categoriesType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute name="length" type="xsd:byte"/>
+                <xsd:attribute default="array" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_changeKeyType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_createdDateTimeType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_end_dateTimeType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_end_timeZoneType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_endType">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="dateTime" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_end_dateTimeType"/>
+            <xsd:element minOccurs="0" name="timeZone" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_end_timeZoneType"/>
+        </xsd:sequence>
+        <xsd:attribute default="object" name="type" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_hasAttachmentsType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_hideAttendeesType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_iCalUIdType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_idType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_importanceType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_isAllDayType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_isCancelledType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_isDraftType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_isOnlineMeetingType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_isOrganizerType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_isReminderOnType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_lastModifiedDateTimeType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_location_displayNameType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_location_locationTypeType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_location_uniqueIdType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_location_uniqueIdTypeType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_locationType">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="displayName" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_location_displayNameType"/>
+            <xsd:element minOccurs="0" name="locationType" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_location_locationTypeType"/>
+            <xsd:element minOccurs="0" name="uniqueId" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_location_uniqueIdType"/>
+            <xsd:element minOccurs="0" name="uniqueIdType" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_location_uniqueIdTypeType"/>
+        </xsd:sequence>
+        <xsd:attribute default="object" name="type" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_locations_object_displayNameType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_locations_object_locationTypeType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_locations_object_uniqueIdType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_locations_object_uniqueIdTypeType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_locations_objectType">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="displayName" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_locations_object_displayNameType"/>
+            <xsd:element minOccurs="0" name="locationType" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_locations_object_locationTypeType"/>
+            <xsd:element minOccurs="0" name="uniqueId" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_locations_object_uniqueIdType"/>
+            <xsd:element minOccurs="0" name="uniqueIdType" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_locations_object_uniqueIdTypeType"/>
+        </xsd:sequence>
+        <xsd:attribute default="object" name="type" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_locationsType">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="object" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_locations_objectType"/>
+        </xsd:sequence>
+        <xsd:attribute name="length" type="xsd:byte"/>
+        <xsd:attribute default="array" name="type" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_occurrenceIdType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_onlineMeetingType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_onlineMeetingProviderType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_onlineMeetingUrlType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_organizer_emailAddress_addressType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_organizer_emailAddress_nameType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_organizer_emailAddressType">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="address" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_organizer_emailAddress_addressType"/>
+            <xsd:element minOccurs="0" name="name" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_organizer_emailAddress_nameType"/>
+        </xsd:sequence>
+        <xsd:attribute default="object" name="type" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_organizerType">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="emailAddress" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_organizer_emailAddressType"/>
+        </xsd:sequence>
+        <xsd:attribute default="object" name="type" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_originalEndTimeZoneType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_originalStartTimeZoneType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_recurrenceType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_reminderMinutesBeforeStartType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_responseRequestedType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_responseStatus_responseType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_responseStatus_timeType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_responseStatusType">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="response" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_responseStatus_responseType"/>
+            <xsd:element minOccurs="0" name="time" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_responseStatus_timeType"/>
+        </xsd:sequence>
+        <xsd:attribute default="object" name="type" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_sensitivityType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_seriesMasterIdType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_showAsType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_start_dateTimeType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_start_timeZoneType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_startType">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="dateTime" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_start_dateTimeType"/>
+            <xsd:element minOccurs="0" name="timeZone" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_start_timeZoneType"/>
+        </xsd:sequence>
+        <xsd:attribute default="object" name="type" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_subjectType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_transactionIdType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_typeType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_object_webLinkType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute default="string" name="type" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar_CreateEvent_document_objectType">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="_odata_context" type="lib_O365_ns:O365Calendar_CreateEvent_document_object__odata_contextType"/>
+            <xsd:element minOccurs="0" name="_odata_etag" type="lib_O365_ns:O365Calendar_CreateEvent_document_object__odata_etagType"/>
+            <xsd:element minOccurs="0" name="allowNewTimeProposals" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_allowNewTimeProposalsType"/>
+            <xsd:element minOccurs="0" name="attendees" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_attendeesType"/>
+            <xsd:element minOccurs="0" name="body" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_bodyType"/>
+            <xsd:element minOccurs="0" name="bodyPreview" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_bodyPreviewType"/>
+            <xsd:element minOccurs="0" name="categories" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_categoriesType"/>
+            <xsd:element minOccurs="0" name="changeKey" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_changeKeyType"/>
+            <xsd:element minOccurs="0" name="createdDateTime" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_createdDateTimeType"/>
+            <xsd:element minOccurs="0" name="end" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_endType"/>
+            <xsd:element minOccurs="0" name="hasAttachments" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_hasAttachmentsType"/>
+            <xsd:element minOccurs="0" name="hideAttendees" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_hideAttendeesType"/>
+            <xsd:element minOccurs="0" name="iCalUId" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_iCalUIdType"/>
+            <xsd:element minOccurs="0" name="id" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_idType"/>
+            <xsd:element minOccurs="0" name="importance" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_importanceType"/>
+            <xsd:element minOccurs="0" name="isAllDay" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_isAllDayType"/>
+            <xsd:element minOccurs="0" name="isCancelled" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_isCancelledType"/>
+            <xsd:element minOccurs="0" name="isDraft" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_isDraftType"/>
+            <xsd:element minOccurs="0" name="isOnlineMeeting" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_isOnlineMeetingType"/>
+            <xsd:element minOccurs="0" name="isOrganizer" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_isOrganizerType"/>
+            <xsd:element minOccurs="0" name="isReminderOn" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_isReminderOnType"/>
+            <xsd:element minOccurs="0" name="lastModifiedDateTime" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_lastModifiedDateTimeType"/>
+            <xsd:element minOccurs="0" name="location" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_locationType"/>
+            <xsd:element minOccurs="0" name="locations" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_locationsType"/>
+            <xsd:element minOccurs="0" name="occurrenceId" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_occurrenceIdType"/>
+            <xsd:element minOccurs="0" name="onlineMeeting" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_onlineMeetingType"/>
+            <xsd:element minOccurs="0" name="onlineMeetingProvider" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_onlineMeetingProviderType"/>
+            <xsd:element minOccurs="0" name="onlineMeetingUrl" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_onlineMeetingUrlType"/>
+            <xsd:element minOccurs="0" name="organizer" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_organizerType"/>
+            <xsd:element minOccurs="0" name="originalEndTimeZone" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_originalEndTimeZoneType"/>
+            <xsd:element minOccurs="0" name="originalStartTimeZone" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_originalStartTimeZoneType"/>
+            <xsd:element minOccurs="0" name="recurrence" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_recurrenceType"/>
+            <xsd:element minOccurs="0" name="reminderMinutesBeforeStart" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_reminderMinutesBeforeStartType"/>
+            <xsd:element minOccurs="0" name="responseRequested" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_responseRequestedType"/>
+            <xsd:element minOccurs="0" name="responseStatus" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_responseStatusType"/>
+            <xsd:element minOccurs="0" name="sensitivity" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_sensitivityType"/>
+            <xsd:element minOccurs="0" name="seriesMasterId" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_seriesMasterIdType"/>
+            <xsd:element minOccurs="0" name="showAs" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_showAsType"/>
+            <xsd:element minOccurs="0" name="start" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_startType"/>
+            <xsd:element minOccurs="0" name="subject" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_subjectType"/>
+            <xsd:element minOccurs="0" name="transactionId" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_transactionIdType"/>
+            <xsd:element minOccurs="0" name="type" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_typeType"/>
+            <xsd:element minOccurs="0" name="webLink" type="lib_O365_ns:O365Calendar_CreateEvent_document_object_webLinkType"/>
+        </xsd:sequence>
+        <xsd:attribute default="object" name="type" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="O365Calendar__CreateEventResponseData">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="object" type="lib_O365_ns:O365Calendar_CreateEvent_document_objectType"/>
+            <xsd:element minOccurs="0" name="error" type="lib_O365_ns:ConvertigoError"/>
+        </xsd:sequence>
+        <xsd:attribute name="connector" type="xsd:string"/>
+        <xsd:attribute name="context" type="xsd:string"/>
+        <xsd:attribute name="contextId" type="xsd:string"/>
+        <xsd:attribute name="fromStub" type="xsd:boolean"/>
+        <xsd:attribute name="fromcache" type="xsd:boolean"/>
+        <xsd:attribute name="generated" type="xsd:string"/>
+        <xsd:attribute name="project" type="xsd:string"/>
+        <xsd:attribute name="sequence" type="xsd:string"/>
+        <xsd:attribute name="signature" type="xsd:long"/>
+        <xsd:attribute name="transaction" type="xsd:string"/>
+        <xsd:attribute name="version" type="xsd:string"/>
+        <xsd:attribute name="screenclass" type="xsd:string"/>
+        <xsd:attribute name="userReference" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="ConvertigoErrorContextVariable">
+        <xsd:attribute name="name" type="xsd:string"/>
+        <xsd:attribute name="value" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="ConvertigoErrorContext">
+        <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="variable" type="lib_O365_ns:ConvertigoErrorContextVariable"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="ConvertigoError">
+        <xsd:sequence minOccurs="0">
+            <xsd:element name="code" type="xsd:integer"/>
+            <xsd:element name="message" type="xsd:string"/>
+            <xsd:element name="details" type="xsd:string"/>
+            <xsd:element name="context" type="lib_O365_ns:ConvertigoErrorContext"/>
+            <xsd:element name="exception" type="xsd:string"/>
+            <xsd:element name="stacktrace" type="xsd:string"/>
+        </xsd:sequence>
+        <xsd:attribute name="project" type="xsd:string"/>
+        <xsd:attribute name="connector" type="xsd:string"/>
+        <xsd:attribute name="transaction" type="xsd:string"/>
+        <xsd:attribute name="sequence" type="xsd:string"/>
+        <xsd:attribute name="type">
+            <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                    <xsd:enumeration value="c8o"/>
+                    <xsd:enumeration value="project"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+        </xsd:attribute>
+    </xsd:complexType>
+</xsd:schema>
