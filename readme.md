@@ -1,7 +1,7 @@
 # This is the Library for accessing Office 365 resources
 You must Be authenticated with Azure Active Directory to be able to use this Library API
 
-##Sequences
+## Sequences
 
 ### OutLookCreateEvent
 Will Create an Event in the current users OutLook default calendar.
