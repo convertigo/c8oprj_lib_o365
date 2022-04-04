@@ -111,7 +111,12 @@ title: Title for APITestpage
             - MobileSmartSourceType: plain:Logout
     ↓Event [ngx.components.UIControlEvent-1648975229640]: 
       ↓CallSequence [ngx.components.UIDynamicAction-1648975229643]: 
-        beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:lib_OAuth.SignOut"}'
+        beanData: |
+          '{
+           "ionBean": "CallSequenceAction",
+           "requestable": "plain:lib_OAuth.SignOut",
+           "noAutoLogin": "plain:true"
+          }'
   ↓Button2 [ngx.components.UIDynamicElement-1648982072629]: 
     beanData: '{"ionBean":"Button"}'
     tagName: ion-button
