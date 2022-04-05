@@ -61,9 +61,7 @@
     value: sncf.sharepoint.com
   ↓__body [variables.StepVariable-1649158337090]: 
     value: AAAAAAAAAAAAAAAAA
-  ↓filename [variables.StepVariable-1649158337092]: 
-    value: TEST.TXT
-  ↓parentid [variables.StepVariable-1649158337094]: 
+  ↓driveid [variables.StepVariable-1649174161337]: 
     sourceDefinition: 
       - xmlizable: 
         - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
@@ -72,4 +70,5 @@
             - ↑value: 1649157364079
           - java.lang.String: 
             - ↑value: ./document/object/value/object/id/text()
-    value: b!zMc01q8SEE2AbOntxkXrn3fBjZ42_CJEmbIpD-hrUFGyCV94O-obRJXQe3EfQK1Q
+  ↓filepath [variables.StepVariable-1649174161339]: 
+    value: test/myfile.txt

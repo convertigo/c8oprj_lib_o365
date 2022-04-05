@@ -25,9 +25,8 @@ trustAllServerCertificates: false
             - java.lang.String: 
               - ↑value: text/plain
   httpVerb: PUT
-  subDir: sites/{siteid}/drive/items/{parentid}:/{filename}:/content
+  subDir: drives/{driveid}/root:/{filepath}:/content
   ↓__body [variables.RequestableHttpVariable-1649158179479]: 
     httpMethod: POST
-  ↓filename [variables.RequestableHttpVariable-1649158210272]: 
-  ↓siteid [variables.RequestableHttpVariable-1649158224518]: 
-  ↓parentid [variables.RequestableHttpVariable-1649158224520]: 
+  ↓driveid [variables.RequestableHttpVariable-1649174136581]: 
+  ↓filepath [variables.RequestableHttpVariable-1649174136583]: 
