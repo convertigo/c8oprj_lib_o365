@@ -1,0 +1,33 @@
+baseDir: /v1.0/
+https: true
+port: 443
+server: graph.microsoft.com
+trustAllServerCertificates: false
+↓Default_transaction [transactions.HttpTransaction]: 
+  ↑default: true
+↓GetSiteInfo [transactions.JsonHttpTransaction]: 
+  subDir: sites/{hostname}:/sites/{sitename}
+  ↓hostname [variables.RequestableHttpVariable-1649154668569]: 
+  ↓sitename [variables.RequestableHttpVariable-1649154668571]: 
+↓ListDrives [transactions.JsonHttpTransaction]: 
+  subDir: sites/{siteid}/drives
+  ↓siteid [variables.RequestableHttpVariable-1649157349209]: 
+↓UploadData [transactions.JsonHttpTransaction]: 
+  httpParameters: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+          - com.twinsoft.convertigo.beans.common.XMLVector: 
+            - java.lang.String: 
+              - ↑value: Content-Type
+            - java.lang.String: 
+              - ↑value: text/plain
+  httpVerb: PUT
+  subDir: sites/{siteid}/drive/items/{parentid}:/{filename}:/content
+  ↓__body [variables.RequestableHttpVariable-1649158179479]: 
+    httpMethod: POST
+  ↓filename [variables.RequestableHttpVariable-1649158210272]: 
+  ↓siteid [variables.RequestableHttpVariable-1649158224518]: 
+  ↓parentid [variables.RequestableHttpVariable-1649158224520]: 

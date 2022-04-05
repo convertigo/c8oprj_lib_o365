@@ -4,10 +4,14 @@
   corsOrigin: =Origin
   version: 1.0.0.0
   ↓O365Calendar [connectors.HttpConnector]: 🗏 connectors/O365Calendar.yaml
+  ↓SharePointConnector [connectors.HttpConnector]: 🗏 connectors/SharePointConnector.yaml
   ↓Users [connectors.HttpConnector]: 🗏 connectors/Users.yaml
   ↓void [connectors.SqlConnector]: 🗏 connectors/void.yaml
   ↓OutlookCreateEvent [sequences.GenericSequence]: 🗏 sequences/OutlookCreateEvent.yaml
+  ↓SharePointUploadFile [sequences.GenericSequence]: 🗏 sequences/SharePointUploadFile.yaml
   ↓UsersList [sequences.GenericSequence]: 🗏 sequences/UsersList.yaml
+  ↓lib_OAuth_reference [references.ProjectSchemaReference]: 
+    projectName: lib_OAuth=https://github.com/convertigo/c8oprj-lib-oauth.git:branch=7.9.0
   ↓lib_UserManager_ui_ngx_reference [references.ProjectSchemaReference]: 
     projectName: lib_UserManager_ui_ngx=https://github.com/convertigo/c8oprj-lib-user-manager-ui-ngx.git:branch=8.0.0
   ↓NgxBuilderTemplate [references.ProjectSchemaReference]: 

@@ -107,19 +107,68 @@ title: First page
         - xmlizable: 
           - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
           - MobileSmartSourceType: |
+              'script:''+https://graph.microsoft.com/Calendars.ReadWrite'' +
+              ''+https://graph.microsoft.com/Sites.ReadWrite.All''
+              '
+  ↓UseSharedComponent1 [ngx.components.UIUseShared-1649157031721]: 
+    isEnabled: false
+    sharedcomponent: lib_UserManager_ui_ngx.MobileApplication.Application.LoginComponent
+    ↓Event [ngx.components.UIControlEvent-1649157031724]: 
+      attrName: (login)
+      comment: |
+        This event will be fired when a login occurs :
+        	Check out.error and out.message  for login errors
+        	The out.user will be user logged in
+        
+      eventName: login
+      ↓PushPage [ngx.components.UIDynamicAction-1649157031727]: 
+        beanData: '{"ionBean":"PushPageAction","page":"plain:lib_O365.Application.NgxApp.APITestpage"}'
+    ↓enableGoogleLogin [ngx.components.UIUseVariable-1649157031730]: 
+      comment: Set to false to disable loggin with google
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:false
+    ↓enableLinkedInLogin [ngx.components.UIUseVariable-1649157031733]: 
+      comment: Set to false to disable login with LinkedIn
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:false
+    ↓enableAzureADLogin [ngx.components.UIUseVariable-1649157031736]: 
+      comment: Set to false to disable login with AzureAD
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:true
+    ↓logoImage [ngx.components.UIUseVariable-1649157031739]: 
+      comment: A logo image to be displayed over the login form (64x64)
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAA9lBMVEUAyPf///8AyvkArN7e9f4AmM2r5/x42/oAseIHnM8QotIAzv0Ax/cAxPUAy/gAyPQAwfMAvOzZ8PVIz/Gl3Omp4fPK6/cAt+oAyfD5/P0iyeoAsOIAvfCy2+X6+fr5/f7t+PvQ5+0AptwAwegAq9kAntcAs93n9Pmb2OxFw97z9PUAv+3B5e4AvuEAreR+1ehjw+Kv7vxV2/o21fmS5/u97v1k3PrT9v6E4Ppx4Poe0fhU1fiz8Pya6PtAuOF9x+Z/0epzw+BLs9lvz+2Cytyu1uKOzd5dv9dt1eo7zOggt9SP0Okp0/Rv3fNcu93J4O2n0+eRytsTgejqAAAOlUlEQVR4nO2deUPiOhfGS6t3WLoDbYECLSAFWhYdcWEuCCiIA6Lv9/8yb5KitmwWRDDcPn/MOAPY/DjJOUnOaUoEjl2E+5+aZpzgLkPT1hCety9+t1iWIGgcRRAs2/p9cXmeTSwl1E6a579+QUAgEkexJAsRr379c36iLSE8aV61CPRNYC1ozNbv5vU8YVZr3/yB3fMoxLJ/fp2fZN021C6vcLeeU3T08tptw5vbY+KDoq9utA/CbPb2qCwIRf+5NbR3wut/mWMDBIjMeXNGmAj8c3N8gADx5jKQRYTZwG3r0K35DtGt1ozwpPnnWMKEWyx7fW0Tnv85xk4K9a9N2Lw4ThMCXbWPnfDiEhH+0zpawtbNf4WQJQ/dku8S+8smJH1CbEX6hNjLJ8RfPiH+8gnxl0+Iv3xC/OUT4i+fEH/5hPjLJ8RfPiH+8gnxl0+Iv3xC/OUT4i+fEH/5hPjLJ8RfPuEeW+LQTn/vDyKkER2945YcnBBCRYBImmYYhgdiGJqA/8XuxpgHJoQQiEtQBShTsPVO+vV2HZSQZKGlVLmWOzs7y+WoQqEIRFFUDqhWkxk6wrLkF0t7D0cIhxyjyqlUMNiZTu/uxuPSm8bjcaPR6ZiyLKs8Q3+tbYckjNA8tF64ML0bD15EUTRsiaIklcaNThHYsqby4I1fadyBCIEBeTmXC3em41dJNwwtYSsQsP/OahoAtZrdRjFYk1U4ILe+1IEIaVqVwcCb9tIvlQpCm1MmkdBEsdTNF4OyynwhhByEMELTtVy40HsVofEW4BxKZA0pnizWUiqzrVs9CCGwX4qaTl+tT/hQnxWl+n2nAz3Odk5174QkydJy7rTfE7X1cA5l4yUwHPntnOq+CcEAlGWq0/NgP0dXRXYUVIbZ5or7JSRBAAdDsJH2bkAb0ohH5RrPbNHM/RKCi9So4lQSPdvvHVE7iXdNATBufM39EtIMlev3KpvyITXjpgni/8bX3CMhGIO1s/7UWNVDMzOtMmO22RbMja24T0IwDQ2Ge+MlPRREdziHEXUgOHvTlrshqZnn+E1vdd0fIbiCetZvGMuMZ+jpwcPDYxnp8eFhkBaNpbaUbkxe3WyCs0dCQg4WxtZ8F01oupWu10f35XLSVjQavR/V62lL1BYMedK8AlbcKGjskZDOUf30glUqxmD4+Leazyscx6HTKliOyyvJZHmYNioLbzeaUZPfyN3si5BkgQUbc/OYREK36o/JpKIANpL72IMCEx9OUZKjkaVn3HbMaufPnLnJTHx/hCmq2JsbWwktHSv/zec5NjI7aMQ+oAQd4QFMmXyKWQuRpdkGhBs41P0QgtWgGi5Ibi+TMNIP1arCwS0nYtm0GmACO8aMOStmby9U3rtD3ZMNSUEu9N2BUDOs4WMV2g9eewkhNCWnPNUtI+u24uXtJguNfRHWzsavLlsk9PTfqmLjrRYAUZIxfc7bXCsc73kk7oWQBKG+ENedhIZYH0EDsp8QEgSnPD+7PZR2chHlPUeMvRCyfK1YdA9CaEGWjXze2WiaUSaW6B7B7VuG9jq32QshLeR6cacZDKNeVhTkYTx8miAmz+4xLJ63uB9ECBYUwtnY3Uf1chW6GE/+gmaAFUVXF0g0J5xXd7obwhXHUtkvskQt2Ek7/GHCiD2CGO/5iiBCchdtV2AU2384j+50J4Qk2nmn7cYsvkrXgg3L0b6EPiwrnPcrQsLJjeiMGca/Fxztzdl8ldDOh5FveaN3MTCvQqD5CcHkOpajk2WMYTnPRja5Cvj10Uunt0lUnif7ICTti8PU0XJBVJpXKdeEVLPKSWWz60GHetF0/I5E5nLi0dd8gRBMHYEvZHhVlmUKqvAm+GMwBQRe4RlZLt47FrQJPVZVPIQJt3iaa187R+L5s7J0qrc7QujpGRXljoqdzrRxh1JHcSSUP+rewfxRxxRyVKPkJIzVQaTflBBY8erSGTGu2y1vvuYrhAwwTw3YqzhFySPdMIwKEvhBfxm8ju96jU6xGAp34x+EGe2hzG1x7h2tRm+dK2Kx+Z2E0H6gc8LOOL0b6IamaSh5FLBbkHjPHwGJYjrtDGaG/pTcIltG0iqnSCeO0WxMJt9JCDqoEAwWOp3xq764EHcqk9F151mbopVUtiLkOa4pOXxN5eK7CMGqjaDlWo4q3r1WVu38rVY6pmzoSG3RoNfctJ3f3PMF7WXStzEhXIcLKsxMg6G3cm9ztWIPmwR7J6GqXt04CevP30IILMiotVyh+PqyMZzdrhG33XFGpKpGrwKOr7RdJ3ZPSKLcLdXpvw7EZRufnxNWRk9bHiBK8qqSdI7o2CXHfQMhwaRqoX6vst69rFSl8pTc7sAmkuXVfPLE8b0225yXeLEJIXQxNSrcH+sb5sY+pBnbEzK8mZcck1MrpuzahiTJ8DWq0BtsDQiWvk/KloQkJGx+JyHJ0gxwMdOXFQMQZo0qM61MIBn6ZKtYQdgLaTPuiIi6pey0l4LXeTlF9cZLkmOz1JGu65JlWZIEE0hg5oYmOgEXKyTcim85obJLQpbgU2f9/pIYD0xn6FZs+FAfQZXhH/V6KRazdNGouK0JZzReXLwXQnGnhGgIpgqlQWKOENGVAFv5PXdk54+enp4gaQlxam+gkHDLUjxAKAvfZ0OW5eWzQn9xDpqp6INhuVyt5oG4D8F/5qvJ5NOoHkt/mBIQcj+REDqZHNV/FeezJIY+HD0lq4rCcSxMprgORydZiKooABNyWjrg1NO7I7TSgNDD57wR8nwORIn5Hpqx0t1yFdqOZVGd75LdNmjOmSl1sfJDCWGFQa5/N5fnylReBkmAx8Lcw/u5/U6h/7FBgSkVYMp6/WH7ccjwc4Sxnc3aSEalqN6rO1eZMPTYQxWlHmbJo8WdxFkukECmhN0V+CPlK4Sm5SBM74oQNFGuFYpzGeeMkX6sVu3U2KePGpiZkqY5mA3dLuLDeamQd6zyM7E6x3mIPB4IaTWY643dVQOGOOyWQQ+1+bzkV2aDcpstGrsZwJsX8x8rmkymtCNCEAlTVHjgTv4AT12uInN4wXP+sk/yhWs+GlHlfPVj9YRWmpyXD35CSJKqnGuU3JlmQy+X8wrLsnt8FAYYK6nG/YcvgCtNT3crfE4oy+G7F7cb1V/KMP9Oessd7UjAGzS6H22oAEJPJRnrCeGiLNcZSy4+Qx+VUXnIrhnWtpNmglQp7vDlmfqzLNdkniY+mXB+QsgLcC7j8qJiGllwv4dHg1gRLMQtZzvaz6YpyyrzSfpiLSGIXKlaf+yyYEIf/s1zkch+D6knIyhR7opYmtaMNzpBWabpdf1pPSHDU9TYValVMUqjqrJlTPuCSLXWabj9XVYTpXj33jSFtengNYTorg+q4N5Ug25U8VJhsFOBkAU8+niurgZKlO6jKXld0ek6G4KpLuUuB61UhnVoQW95rd2JJWS5UNKX1JxmNUm6vxcEfuVdNesIweDOvQ5cfbTyWAaDcO+PhIKlAMUV1e+aVuoKgrryVoXVhCTByJ2Oq+tn0rFqHsX5vQKCK4KY1RWXAgZQIf+9qfIrPv0J4dQ5CDOV2EM+D2tE9jwKwaSbmpZWb7JrUjdvqisatZIQTFh4+W7gKoAAUxl4x+OeAWmSraWK3bUF/oa0srB2zTgEhF3LQVixhsn8AQjBBVNBV6J8iRVPblaVuq0jZISx5Mi/G6UynIx+N9BCC1mepwqv0mo8JOncNJfObtYR0vx9/N2GGSM2qm5eYfB1oZRMQ3fLWNi31YxodGmJ+1pCZ/lDRXyAdT4HICQB4b2hp9OD9Jvgvt2CFZ8vls5t1s7aGKU1q1zOVAbDQ0zWCPRF00prMkk69fRUj81Dik1uWRHR+jkNp5xbqK7CMB4e89zWC/SvCEZfQJhUnEomR3VLD7jX5ZKyKSH89UqrHksPBo+PVbim/26aVUI7ks5tWJLkuMlEd4dI7Tm6pP77szW+osA0S7c8K3g9mGb3KMwEVr0cpyTb5679MfSEyo0J7Z3OPOA7KODCg23R5mTrwlUAnpVulmy+edgRRpmWHR3DsVPRXOu56axbNWCt2/y7PO15k+yuD43ZhYCT5Saufpo5n7BbEf5YMbT5y1l1mmleLD7FEWtCmlGv2s6RaD0fGSFLq9zFtbMssB1d2AbHmhCWZCad94uJseMjNPPNk6Mm5E0zfn3MhAQjyK4ClGMkDPqEPuGPlk9ov8kn/MnyCe03+YQ/WT6h/Sa8CXlBOGpCeAer0G6+A2as+rEREgTjvKEtY5UXb8HAnJBk1N8T0YA3PWQyxqCbXLxfBXdCmlcUS0K5lYrxv8fq4kEGmBOi6tzJ01tuJb9kYx57QoCoJEf14XCIKkKXFD5hTwgZ0f0dHDyPafHVoyAkZrexLC3gOwZCVF0dIVcU9B4H4SyHuvyVIyFcLZ8Qf/mE+MsnxF8+If7yCfGXT4i/fEL85RPiL58Qf/mE+MsnxF8+If7yCfGXT4i/fEL85RPiL58Qf/13CLc6Jx0DkQT3RvjJmWC46p0wbh4toXlvEwrHSki+EQbpjR7eg41INng3I9z62eU/WiRNFLuI8LVgbvdc758t+DCVom3DdF+QD3ewx7eJZAV5OkaE1rSY2vNZj/sQG5GD0xIiFOP9kMDv/xCobxUZYYRwOG59EApHR8gDwqaECBOBXiEU5pmDnCL0LSLJCMFToUI/kJ0RjnuhsCx4OpkXA8GCWkaQqdC0NyMMBCTr9DRECbT97OFDt/BLgqf6R1hSCIZCp+jYWpvQMKZTgBiUTZNe9UxKXETQjCkHw+HT/hSdvkrM7hrq9oAVwzlBgF4WZ7Fgui1Q4dDp6bSLDj55I9TEXv80FAKQFJUKpoJ4CrSconJhwBHqdyX7ZJc3wqzRnYaQwhTeCtsYgDDrIoSD0Wp0wEunp+gPPGU3/7TQ+XhM8gdhwpBKd/1+ODz7EjAVaH+/fzf+eI6Cw4ZQ8Xhj2imEMVan3yjFnUfL/h8w9PEGcfJKgwAAAABJRU5ErkJggg=='
+    ↓enableCancelDismiss [ngx.components.UIUseVariable-1649157031742]: 
+      comment: Set to true if you want a cancel button to be displayed causing a Modal Page dismiss
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:true
+    ↓logoWidth [ngx.components.UIUseVariable-1649157031745]: 
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:'100'
+    ↓scope [ngx.components.UIUseVariable-1649157031748]: 
+      comment: Set to false to disable loggin with google
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: |
               'script:''+https://graph.microsoft.com/Calendars.Read''+
               ''+https://graph.microsoft.com/Calendars.ReadWrite''+
               ''+https://graph.microsoft.com/User.Read.All''
               
               '
-    ↓tenantid [ngx.components.UIUseVariable-1649003733073]: 
-      comment: |
-        Additional Scope to be added to the standard Scope. This will be concatenated to to the scopr string. For Azure AD start with a + sign
-        
-      varValue: 
-        - xmlizable: 
-          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-          - MobileSmartSourceType: script:
 ↓Footer [ngx.components.UIDynamicElement-1491634242460]: 
   beanData: '{"ionBean":"Footer"}'
   comment: Page footer

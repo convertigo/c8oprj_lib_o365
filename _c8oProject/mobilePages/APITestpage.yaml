@@ -117,6 +117,8 @@ title: Title for APITestpage
            "requestable": "plain:lib_OAuth.SignOut",
            "noAutoLogin": "plain:true"
           }'
+        ↓PopPage [ngx.components.UIDynamicAction-1649080495901]: 
+          beanData: '{"ionBean":"PopPageAction"}'
   ↓Button2 [ngx.components.UIDynamicElement-1648982072629]: 
     beanData: '{"ionBean":"Button"}'
     tagName: ion-button
@@ -131,6 +133,20 @@ title: Title for APITestpage
     ↓Event [ngx.components.UIControlEvent-1648982072638]: 
       ↓CallSequence [ngx.components.UIDynamicAction-1648982072641]: 
         beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:lib_O365.UsersList"}'
+  ↓Button3 [ngx.components.UIDynamicElement-1649080552498]: 
+    beanData: '{"ionBean":"Button"}'
+    tagName: ion-button
+    ↓Label [ngx.components.UIDynamicElement-1649080552501]: 
+      beanData: '{"ionBean":"Label"}'
+      tagName: ion-label
+      ↓Text [ngx.components.UIText-1649080552504]: 
+        textValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+            - MobileSmartSourceType: plain:UploadFile toSharepint
+    ↓Event [ngx.components.UIControlEvent-1649080552507]: 
+      ↓CallSequence [ngx.components.UIDynamicAction-1649080586569]: 
+        beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:lib_O365.SharePointUploadFile"}'
   ↓ListContainer [ngx.components.UIDynamicElement-1648982595730]: 
     beanData: '{"ionBean":"List"}'
     tagName: ion-list

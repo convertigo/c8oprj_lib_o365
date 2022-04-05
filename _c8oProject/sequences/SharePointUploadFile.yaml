@@ -1,0 +1,75 @@
+↓GetTokenFromSession [steps.SessionGetStep-1649080219726]: 
+  key: oAuthAccessToken
+  output: false
+↓Call_Transaction [steps.TransactionStep-1649080200875]: 
+  sourceTransaction: lib_O365.SharePointConnector.GetSiteInfo
+  ↓__header_Authorization [variables.StepVariable-1649080233498]: 
+    sourceDefinition: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - java.lang.String: 
+            - ↑value: 1649080219726
+          - java.lang.String: 
+            - ↑value: ./expression/text()
+    value: sncf.sharepoint.com
+  ↓hostname [variables.StepVariable-1649154715616]: 
+    value: vincienergiestests.sharepoint.com
+  ↓sitename [variables.StepVariable-1649154715618]: 
+    value: ttc-Actu-Pierre
+↓Call_Transaction1 [steps.TransactionStep-1649157364079]: 
+  sourceTransaction: lib_O365.SharePointConnector.ListDrives
+  ↓siteid [variables.StepVariable-1649157364081]: 
+    sourceDefinition: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - java.lang.String: 
+            - ↑value: 1649080200875
+          - java.lang.String: 
+            - ↑value: ./document/object/id/text()
+  ↓__header_Authorization [variables.StepVariable-1649157445523]: 
+    sourceDefinition: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - java.lang.String: 
+            - ↑value: 1649080219726
+          - java.lang.String: 
+            - ↑value: ./expression/text()
+    value: sncf.sharepoint.com
+↓Call_Transaction2 [steps.TransactionStep-1649158319593]: 
+  sourceTransaction: lib_O365.SharePointConnector.UploadData
+  ↓siteid [variables.StepVariable-1649158319596]: 
+    sourceDefinition: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - java.lang.String: 
+            - ↑value: 1649080200875
+          - java.lang.String: 
+            - ↑value: ./document/object/id/text()
+  ↓__header_Authorization [variables.StepVariable-1649158319599]: 
+    sourceDefinition: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - java.lang.String: 
+            - ↑value: 1649080219726
+          - java.lang.String: 
+            - ↑value: ./expression/text()
+    value: sncf.sharepoint.com
+  ↓__body [variables.StepVariable-1649158337090]: 
+    value: AAAAAAAAAAAAAAAAA
+  ↓filename [variables.StepVariable-1649158337092]: 
+    value: TEST.TXT
+  ↓parentid [variables.StepVariable-1649158337094]: 
+    sourceDefinition: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - java.lang.String: 
+            - ↑value: 1649157364079
+          - java.lang.String: 
+            - ↑value: ./document/object/value/object/id/text()
+    value: b!zMc01q8SEE2AbOntxkXrn3fBjZ42_CJEmbIpD-hrUFGyCV94O-obRJXQe3EfQK1Q
